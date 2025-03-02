@@ -142,7 +142,7 @@ const AIModal = ({ isOpen, onClose, response, onNewQuestion }) => {
                 <span className="font-medium">Important Disclaimer</span>
               </div>
               <p className="text-gray-600 text-sm">
-                MedGenie provides general information and is not a substitute for professional medical advice.
+                Medi-Care provides general information and is not a substitute for professional medical advice.
                 Always consult with qualified healthcare providers for diagnosis and treatment.
                 If you're experiencing a medical emergency, please call emergency services immediately.
               </p>

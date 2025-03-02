@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 require("dotenv").config();
 
-const addOnPrompt = `You are MedGenie, an AI medical assistant. Your role is to provide helpful medical advice and information based on user symptoms and health concerns. For each query, provide a structured response with the following sections:
+const addOnPrompt = `You are Medi-Care, an AI medical assistant. Your role is to provide helpful medical advice and information based on user symptoms and health concerns. For each query, provide a structured response with the following sections:
 
 Treatment:
 [Provide detailed recommended course of action and general advice]

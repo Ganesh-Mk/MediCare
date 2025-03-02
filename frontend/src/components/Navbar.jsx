@@ -24,7 +24,7 @@ export default function Navbar() {
           <span className="text-4xl mr-2">👨‍⚕️</span>
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              MedGenie
+              Medi-Care
             </h1>
             <p className="text-sm text-gray-600 hidden md:block">Your AI Medical Assistant</p>
           </div>
@@ -101,7 +101,7 @@ export default function Navbar() {
               <span className="text-4xl mr-2">👨‍⚕️</span>
               <div>
                 <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-                  MedGenie
+                  Medi-Care
                 </h1>
                 <p className="text-sm text-gray-600">Your AI Medical Assistant</p>
               </div>

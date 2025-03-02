@@ -6,13 +6,14 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://localhost:3000/getAIResponse', {
+      const res = await fetch(`${BACKEND_URL}/getAIResponse`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +83,7 @@ const Home = () => {
             <span className="font-medium">Important Disclaimer</span>
           </div>
           <p className="text-gray-600 text-sm">
-            MedGenie provides general information and is not a substitute for professional medical advice.
+            Medi-Care provides general information and is not a substitute for professional medical advice.
             Always consult with qualified healthcare providers for diagnosis and treatment.
             If you're experiencing a medical emergency, please call emergency services immediately.
           </p>

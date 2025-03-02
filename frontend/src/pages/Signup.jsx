@@ -24,6 +24,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const validateForm = () => {
     const newErrors = {};
@@ -49,7 +50,7 @@ const Signup = () => {
       setIsLoading(true);
       console.log("handle submit")
       try {
-        const response = await fetch("http://localhost:3000/signup", {
+        const response = await fetch(`${BACKEND_URL}/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -108,7 +109,7 @@ const Signup = () => {
             </div>
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-            Join MedGenie
+            Join Medi-Care
           </h2>
           <p className="mt-2 text-sm text-gray-600">
             Your personal AI medical assistant

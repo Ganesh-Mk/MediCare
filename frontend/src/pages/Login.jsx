@@ -16,6 +16,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   const validateForm = () => {
     const newErrors = {};
@@ -32,7 +33,7 @@ const Login = () => {
     if (validateForm()) {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:3000/login", {
+        const response = await fetch(`${BACKEND_URL}/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -87,7 +88,7 @@ const Login = () => {
             </div>
           </div>
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
-            Welcome back to MedGenie
+            Welcome back to Medi-Care
           </h2>
           <p className="mt-2 text-sm text-gray-600">
             Your trusted AI medical assistant
