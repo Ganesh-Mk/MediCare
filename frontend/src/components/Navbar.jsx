@@ -17,9 +17,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Desktop and Mobile Header */}
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo Section */}
         <div className="flex items-center space-x-2">
           <span className="text-4xl mr-2">👨‍⚕️</span>
           <div>
