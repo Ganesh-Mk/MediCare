@@ -52,6 +52,7 @@ const AppContextProvider = (props) => {
 
     }
 
+
     useEffect(() => {
         getDoctosData()
     }, [])

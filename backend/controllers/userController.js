@@ -10,10 +10,10 @@ import razorpay from 'razorpay';
 
 // Gateway Initialize
 const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
-const razorpayInstance = new razorpay({
-    key_id: process.env.RAZORPAY_KEY_ID,
-    key_secret: process.env.RAZORPAY_KEY_SECRET,
-})
+// const razorpayInstance = new razorpay({
+//     key_id: process.env.RAZORPAY_KEY_ID || "",
+//     key_secret: process.env.RAZORPAY_KEY_SECRET || "",
+// })
 
 // API to register user
 const registerUser = async (req, res) => {
@@ -296,7 +296,7 @@ const paymentStripe = async (req, res) => {
             return res.json({ success: false, message: 'Appointment Cancelled or not found' })
         }
 
-        const currency = process.env.CURRENCY.toLocaleLowerCase()
+        const currency = "usd"
 
         const line_items = [{
             price_data: {
