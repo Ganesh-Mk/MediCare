@@ -11,7 +11,7 @@ const Header = () => {
                     Book Doctors <br /> & Get AI Health Assistance
                 </p>
                 <div className='flex flex-col md:flex-row items-center gap-3 text-white text-sm font-light'>
-                    <img className='w-28' src={assets.group_profiles} alt="" />
+                    {/* <img className='w-28' src={assets.group_profiles} alt="" /> */}
                     <p>Simply browse through our extensive list of trusted doctors, <br className='hidden sm:block' /> schedule your appointment hassle-free.</p>
                 </div>
 
@@ -42,7 +42,7 @@ const Header = () => {
                         <p className='font-medium text-primary'>Health Assistant</p>
                     </div>
                     <p className='text-xs text-gray-600'>Get instant answers to your health-related questions from our AI medical assistant</p>
-                    <a href='/assistant' className='text-xs text-primary font-medium mt-2 flex items-center'>
+                    <a href='/assistant' className='text-xs text-primary font-medium mt-2 flex items-center text-center'>
                         Try now <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" viewBox="0 0 16 16" className="ml-1">
                             <path fillRule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
                         </svg>
@@ -51,7 +51,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Medical Assistant Banner */}
-            <div className='w-full bg-white/90 p-4 rounded-lg shadow-sm mt-4 flex items-center justify-between md:hidden'>
+            <div className='w-full bg-white/90 p-4 rounded-lg shadow-sm mt-4 flex items-center justify-between md:hidden mb-5'>
                 <div className='flex items-center gap-3'>
                     <div className='w-10 h-10 rounded-full bg-primary flex items-center justify-center'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16">
@@ -64,7 +64,7 @@ const Header = () => {
                         <p className='text-xs text-gray-600'>Get instant answers to your health questions</p>
                     </div>
                 </div>
-                <a href='/assistant' className='bg-primary text-white px-4 py-2 rounded-full text-xs'>Try now</a>
+                <a href='/assistant' className='bg-primary text-white px-4 py-2 rounded-full text-xs text-center'>Try now</a>
             </div>
         </div>
     )

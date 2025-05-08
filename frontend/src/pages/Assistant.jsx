@@ -38,7 +38,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen rounded-md bg-gradient-to-b from-blue-50 to-white">
+    <div className="rounded-md bg-gradient-to-b from-blue-50 to-white">
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-8">
