@@ -49,6 +49,7 @@ const AIModal = ({ isOpen, onClose, response, onNewQuestion }) => {
     'Treatment': '🏥',
     'Home Remedies': '🏠',
     'Medication': '💊',
+    'When to Consult a Doctor': '👨‍⚕️',
     'Additional Advice': '📋',
     'Disclaimer': '⚠️'
   };
@@ -60,7 +61,7 @@ const AIModal = ({ isOpen, onClose, response, onNewQuestion }) => {
     let currentContent = [];
 
     // Check if the response has expected sections
-    const hasSections = /^(Treatment|Home Remedies|Medication|Additional Advice|Disclaimer):/.test(text);
+    const hasSections = /^(Treatment|Home Remedies|Medication|When to Consult a Doctor|Additional Advice|Disclaimer):/.test(text);
 
     // If no sections are found, return the entire response as a "Response" section
     if (!hasSections) {
@@ -68,7 +69,7 @@ const AIModal = ({ isOpen, onClose, response, onNewQuestion }) => {
     }
 
     text.split('\n').forEach(line => {
-      if (line.match(/^(Treatment|Home Remedies|Medication|Additional Advice|Disclaimer):/)) {
+      if (line.match(/^(Treatment|Home Remedies|Medication|When to Consult a Doctor|Additional Advice|Disclaimer):/)) {
         if (currentSection) {
           sections[currentSection] = currentContent.join('\n');
           currentContent = [];
@@ -92,7 +93,7 @@ const AIModal = ({ isOpen, onClose, response, onNewQuestion }) => {
   const parsedSections = parseSections(response);
 
   return (
-    <div className="fixed inset-0 z-100 overflow-y-auto">
+    <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out"

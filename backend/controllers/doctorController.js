@@ -49,8 +49,11 @@ Home Remedies:
 Medication:
 [Provide information about relevant over-the-counter or common prescription medications, noting that actual medication should be prescribed by a doctor]
 
+When to Consult a Doctor:
+[Provide clear guidance on when the user should seek professional medical help, including specific symptoms or conditions that require immediate attention or if symptoms persist beyond a certain timeframe]
+
 Additional Advice:
-[Include preventive measures, lifestyle changes, and when to seek professional medical help]
+[Include preventive measures, lifestyle changes, and other helpful information]
 
 Note: This is computer-generated advice. Please consult healthcare professionals for accurate diagnosis and treatment.
 
@@ -81,6 +84,8 @@ User's health concern:`;
         });
     }
 }
+
+
 // API to get doctor appointments for doctor panel
 const appointmentsDoctor = async (req, res) => {
     try {
